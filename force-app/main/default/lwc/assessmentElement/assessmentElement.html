@@ -1,0 +1,50 @@
+<template>
+    <template lwc:if={isEditBlock}>
+        <c-assessment-edit-block-element edit-block-data={elementData}></c-assessment-edit-block-element>
+    </template>
+    <template lwc:elseif={isRichText}>
+        <div class="slds-p-vertical_small">
+            <lightning-formatted-rich-text value={value}></lightning-formatted-rich-text>
+        </div>
+    </template>
+    <template lwc:elseif={isBlock}>
+        <div class="slds-section__content slds-p-horizontal_large" id={key}>
+            <c-assessment-form form-data={value}></c-assessment-form>
+        </div>
+    </template>
+    <template lwc:else>
+        <div class="slds-form__row">
+            <div class="slds-form-element slds-form-element_readonly slds-form-element_horizontal">
+                <span class="slds-form-element__label">{label}</span>
+                <div class="slds-form-element__control">
+                    <template lwc:if={isNa}>
+                        <div class="slds-form-element__static">{naLabel}</div>
+                    </template>
+                    <template lwc:elseif={isTextArea}>
+                        <div class="slds-form-element__static slds-text-longform">{value}</div>
+                    </template>
+                    <template lwc:elseif={isBoolean}>
+                        <div class="slds-form-element__static">
+                            <template lwc:if={value}>
+                                <lightning-icon icon-name="utility:check" size="x-small" alternative-text="True" title="True"></lightning-icon>
+                            </template>
+                            <template lwc:else>
+                                <lightning-icon icon-name="utility:steps" size="x-small" alternative-text="True" title="True"></lightning-icon>
+                            </template>
+                        </div>
+                    </template>
+                    <template lwc:else>
+                        <div class="slds-form-element__static">
+                            <template lwc:if={isTelephone}>
+                                <lightning-formatted-phone value={value} disabled></lightning-formatted-phone>
+                            </template>
+                            <template lwc:else>
+                                {value}
+                            </template>
+                        </div>
+                    </template>
+                </div>
+            </div>
+        </div>
+    </template>
+</template>

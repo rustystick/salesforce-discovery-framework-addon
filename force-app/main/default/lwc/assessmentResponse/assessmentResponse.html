@@ -1,0 +1,11 @@
+<template>
+    <template lwc:if={hasData}>
+        <div class="slds-clearfix detail-panel-root slds-card">
+            <div class="slds-card__body slds-card__body_inner">
+                <template for:each={steps} for:item="step">
+                        <c-assessment-step key={step.key} label={step.label} step-data={step.value}></c-assessment-step>
+                </template>
+            </div>
+        </div>
+    </template>
+</template>

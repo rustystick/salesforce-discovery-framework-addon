@@ -1,0 +1,7 @@
+<template>
+    <div class="slds-form">
+        <template for:each={dataArray} for:item="elementData">
+            <c-assessment-element key={elementData.key} element-data={elementData}></c-assessment-element>
+        </template>
+    </div>
+</template>

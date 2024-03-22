@@ -1,0 +1,29 @@
+{
+  "orgName": "andi.xie company",
+  "edition": "Developer",
+  "features": [
+    "EnableSetPasswordInApi",
+    "HealthCloudAddOn",
+    "Assessments",
+    "OmniStudioDesigner",
+    "OmniStudioRuntime",
+    "InsuranceCalculationUser",
+    "StandardOmniStudioRuntime",
+    "OmniStudioMetadata",
+    "DocGen",
+    "DocGenDesigner",
+    "DocGenInd"
+  ],
+  "settings": {
+    "industriesSettings": {
+      "enableIndustriesAssessment": true,
+      "enableDiscoveryFrameworkMetadata": true
+    },
+    "lightningExperienceSettings": {
+      "enableS1DesktopEnabled": true
+    },
+    "mobileSettings": {
+      "enableS1EncryptedStoragePref2": false
+    }
+  }
+}

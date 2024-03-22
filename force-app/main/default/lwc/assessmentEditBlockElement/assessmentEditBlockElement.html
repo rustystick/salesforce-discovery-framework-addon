@@ -1,0 +1,17 @@
+<template>
+    <h2 class="slds-card__header-title">
+        <span>{label}</span>
+    </h2>
+    <br>
+    <template lwc:if={hasValues}>
+        <lightning-datatable key-field="rowNum" data={tableData} columns={columns} hide-checkbox-column onrowaction={handleView}></lightning-datatable>
+    </template>
+    <dialog>
+        <div>
+            <lightning-button-icon class="close-button" icon-name="utility:close" alternative-text="close modal" size="large" type="button" variant="bare" onclick={closeModal}></lightning-button-icon>
+        </div>
+        <div class="slds-size_xx-large slds-p-around_small">
+            <c-assessment-form form-data={selectedEntry}></c-assessment-form>
+        </div>
+    </dialog>
+</template>

@@ -1,0 +1,10 @@
+dialog {
+    border : none;
+    border-radius: 0.5rem;
+}
+
+.close-button{
+    position: absolute;
+    top: 0;
+    right:0;
+}
