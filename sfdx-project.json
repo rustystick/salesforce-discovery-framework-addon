@@ -2,11 +2,26 @@
   "packageDirectories": [
     {
       "path": "force-app",
-      "default": true
+      "default": true,
+      "package": "DiscoverFrameworkExtension",
+      "versionName": "ver 0.1",
+      "versionNumber": "0.1.0.NEXT",
+      "versionDescription": "",
+      "definitionFile": "config/project-scratch-def.json",
+      "dependencies": [
+        {
+          "package": "omnistudio"
+        }
+      ]
     }
   ],
   "name": "assessments",
   "namespace": "",
   "sfdcLoginUrl": "https://login.salesforce.com",
-  "sourceApiVersion": "58.0"
+  "sourceApiVersion": "58.0",
+  "packageAliases": {
+    "DiscoverFrameworkExtension": "0HoKi000000PAsDKAW",
+    "omnistudio": "04t4W0000038blyQAA",
+    "DiscoverFrameworkExtension@0.1.0-2": "04tKi000000D2MfIAK"
+  }
 }
